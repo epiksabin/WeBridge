@@ -1,0 +1,73 @@
+# PYTHON ----
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# PyInstaller / build artifacts
+dist/
+build/
+*.egg-info/
+
+# Pytest cache
+.pytest_cache/
+
+
+# C++ ----
+# Compiled object files
+*.o
+*.obj
+
+# Compiled libraries/executables
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+# CMake / build directories
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# JS ----
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build directories
+dist/
+
+# Temporary package locks
+*.lock
+
+# GENERAL ----
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*.log
+*.tmp
+
+# IDEs ----
+# VS Code
+.vscode/
+
+# JetBrains / CLion / PyCharm
+.idea/
+
+# MISC ----
+# gitout hub
+.github/instructions/
