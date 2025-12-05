@@ -1,4 +1,4 @@
-# OBridge Tests CMakeLists.txt
+# WeBridge Tests CMakeLists.txt
 cmake_minimum_required(VERSION 3.16)
 project(OBridge_Tests)
 
@@ -13,10 +13,10 @@ set(BRIDGE_SOURCES
 )
 
 # add bridge library
-add_library(obridge STATIC ${BRIDGE_SOURCES})
+add_library(WeBridge STATIC ${BRIDGE_SOURCES})
 
 # include directories for the bridge library
-target_include_directories(obridge PUBLIC
+target_include_directories(WeBridge PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/../src/cpp/include
 )
 
@@ -24,25 +24,25 @@ target_include_directories(obridge PUBLIC
 find_package(Python3 COMPONENTS Development REQUIRED)
 
 # link Python to the bridge library
-target_link_libraries(obridge PUBLIC Python3::Python)
+target_link_libraries(WeBridge PUBLIC Python3::Python)
 
 # platform-specific linking
 if(WIN32)
     # Windows: link against dynamic loader
-    target_link_libraries(obridge PUBLIC)
+    target_link_libraries(WeBridge PUBLIC)
 elseif(UNIX AND NOT APPLE)
     # Linux: link against dynamic loader
-    target_link_libraries(obridge PUBLIC dl)
+    target_link_libraries(WeBridge PUBLIC dl)
 elseif(APPLE)
     # macOS: link against dynamic loader
-    target_link_libraries(obridge PUBLIC dl)
+    target_link_libraries(WeBridge PUBLIC dl)
 endif()
 
 # add test executable
 add_executable(test_obridge test.cpp)
 
 # link test executable with bridge library
-target_link_libraries(test_obridge PRIVATE obridge)
+target_link_libraries(test_obridge PRIVATE WeBridge)
 
 # include directories for the test
 target_include_directories(test_obridge PRIVATE
@@ -57,11 +57,11 @@ add_test(NAME OBridgeTest COMMAND test_obridge)
 
 # optional: other test files here
 # add_executable(test_cpp ../examples/cpp_example.cpp)
-# target_link_libraries(test_cpp PRIVATE obridge)
+# target_link_libraries(test_cpp PRIVATE WeBridge)
 # add_test(NAME CppExampleTest COMMAND test_cpp)
 
 # status
-message(STATUS "=== OBridge Build Configuration ===")
+message(STATUS "=== WeBridge Build Configuration ===")
 message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
 message(STATUS "Python Version: ${Python3_VERSION}")
 message(STATUS "Python Include: ${Python3_INCLUDE_DIRS}")

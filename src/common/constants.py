@@ -1,5 +1,5 @@
 OBRIDGE_VERSION = "0.0.1"
-OBRIDGE_NAME = "OBridge"
+OBRIDGE_NAME = "WeBridge"
 
 LANG_PYTHON = "py"
 LANG_CPP = "c++"

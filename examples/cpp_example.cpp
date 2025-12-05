@@ -1,15 +1,15 @@
 /*
- * OBridge C++ Example
+ * WeBridge C++ Example
  * Demonstrates how to call Python and JavaScript functions from C++
  */
 
 #include "../src/cpp/include/bridge.hpp"
 #include <iostream>
 
-using namespace OBridge;
+using namespace WeBridge;
 
 int main() {
-    std::cout << "=== OBridge C++ Examples ===" << std::endl;
+    std::cout << "=== WeBridge C++ Examples ===" << std::endl;
 
     // ============================================================
     // Example 1: Call Python function

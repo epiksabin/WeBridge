@@ -1,12 +1,12 @@
 """
-OBridge Python Example
+WeBridge Python Example
 Demonstrates how to call C++ and JavaScript functions from Python
 """
 
 from src.python.bridge import cpp, js
 
 def main():
-    print("=== OBridge Python Examples ===\n")
+    print("=== WeBridge Python Examples ===\n")
 
     # ============================================================
     # Example 1: Load and call C++ shared library

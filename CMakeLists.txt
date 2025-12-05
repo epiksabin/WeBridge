@@ -1,6 +1,6 @@
-# OBridge Root CMakeLists.txt
+# WeBridge Root CMakeLists.txt
 cmake_minimum_required(VERSION 3.16)
-project(OBridge VERSION 0.0.1 LANGUAGES CXX)
+project(WeBridge VERSION 0.0.1 LANGUAGES CXX)
 
 # set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -15,7 +15,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 find_package(Python3 COMPONENTS Development REQUIRED)
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# OBridge Core Library
+# WeBridge Core Library
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 set(BRIDGE_SOURCES
@@ -23,25 +23,25 @@ set(BRIDGE_SOURCES
     src/cpp/src/type_converter.cpp
 )
 
-add_library(obridge STATIC ${BRIDGE_SOURCES})
+add_library(WeBridge STATIC ${BRIDGE_SOURCES})
 
-target_include_directories(obridge PUBLIC
+target_include_directories(WeBridge PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src/cpp/include
 )
 
-target_link_libraries(obridge PUBLIC
+target_link_libraries(WeBridge PUBLIC
     Python3::Python
 )
 
 # platform-specific configurations
 if(WIN32)
-    target_compile_definitions(obridge PRIVATE WINDOWS_BUILD)
+    target_compile_definitions(WeBridge PRIVATE WINDOWS_BUILD)
 elseif(UNIX AND NOT APPLE)
-    target_link_libraries(obridge PUBLIC dl)
-    target_compile_definitions(obridge PRIVATE LINUX_BUILD)
+    target_link_libraries(WeBridge PUBLIC dl)
+    target_compile_definitions(WeBridge PRIVATE LINUX_BUILD)
 elseif(APPLE)
-    target_link_libraries(obridge PUBLIC dl)
-    target_compile_definitions(obridge PRIVATE MACOS_BUILD)
+    target_link_libraries(WeBridge PUBLIC dl)
+    target_compile_definitions(WeBridge PRIVATE MACOS_BUILD)
 endif()
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -49,7 +49,7 @@ endif()
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 add_executable(cpp_example examples/cpp_example.cpp)
-target_link_libraries(cpp_example PRIVATE obridge)
+target_link_libraries(cpp_example PRIVATE WeBridge)
 target_include_directories(cpp_example PRIVATE src/cpp/include)
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -65,13 +65,13 @@ add_subdirectory(tests)
 # installation configuration
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-   
 
-install(TARGETS obridge
+install(TARGETS WeBridge
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
 )
 
 install(DIRECTORY src/cpp/include/
-    DESTINATION include/obridge
+    DESTINATION include/WeBridge
 )
 
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -79,7 +79,7 @@ install(DIRECTORY src/cpp/include/
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 message(STATUS "")
-message(STATUS "=== OBridge Build Configuration ===")
+message(STATUS "=== WeBridge Build Configuration ===")
 message(STATUS "Project: ${PROJECT_NAME} v${PROJECT_VERSION}")
 message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
 message(STATUS "Build Type: ${CMAKE_BUILD_TYPE}")
@@ -94,7 +94,7 @@ message(STATUS "  Runtime: ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 message(STATUS "  Libraries: ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}")
 message(STATUS "")
 message(STATUS "Targets:")
-message(STATUS "  - obridge (static library)")
+message(STATUS "  - WeBridge (static library)")
 message(STATUS "  - cpp_example (executable)")
 message(STATUS "  - test_obridge (executable)")
 message(STATUS "")

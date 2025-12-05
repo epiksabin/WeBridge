@@ -1,7 +1,7 @@
 #include "../include/bridge.hpp"
 #include <iostream>
 
-namespace OBridge {
+namespace WeBridge {
 
 /**
  * @brief Utility functions for type conversion
@@ -37,4 +37,4 @@ bool can_convert_to_double(const std::any& value) {
 
 } // namespace utils
 
-} // namespace OBridge
+} // namespace WeBridge

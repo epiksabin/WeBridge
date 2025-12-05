@@ -1,6 +1,6 @@
-# Contributing to OBridge
+# Contributing to WeBridge
 
-Thanks for your interest in contributing to **OBridge**! 🚀  
+Thanks for your interest in contributing to **WeBridge**! 🚀  
 This document will guide you through how to report issues, propose features, and submit code contributions.
 
 ---
@@ -23,17 +23,17 @@ Please adhere to respectful and inclusive behavior. By contributing, you agree t
 ---
 
 ## Getting Started
-To set up OBridge locally:
+To set up WeBridge locally:
 
 1. Fork the repository and clone it:
 
 ```bash
-git clone https://github.com/epiksabin/OBridge.git
-cd OBridge
+git clone https://github.com/epiksabin/WeBridge.git
+cd WeBridge
 ```
 
 ## Project Structure
-- `src/` - Source code for OBridge library
+- `src/` - Source code for WeBridge library
     - `/python/` - Python bridge implementation
     - `/cpp/` - C++ bridge implementation
         - `/include/` - header files
@@ -75,4 +75,4 @@ example::Code();
 
 
 ## Reporting Issues
-- Use the [Issues](https://github.com/epiksabin/OBridge/issues) section to report bugs or suggest features.
+- Use the [Issues](https://github.com/epiksabin/WeBridge/issues) section to report bugs or suggest features.

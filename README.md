@@ -1,8 +1,8 @@
-# OBridge
+# WeBridge
 
 **A bridge library to seamlessly integrate Python, C++ and JavaScript together.**
 
-OBridge allows developers to call functions and exchange data across Python, C++, and JavaScript with a **single, consistent API**, eliminating the pain of writing tedious bindings or boilerplate code.
+WeBridge allows developers to call functions and exchange data across Python, C++, and JavaScript with a **single, consistent API**, eliminating the pain of writing tedious bindings or boilerplate code.
 
 ---
 
@@ -50,7 +50,7 @@ Contributions are welcome! Please read the [contributing guide](docs/contributin
 
 ## 🔧 Installation
 
-See [installation guide](docs/installation.md) for detailed instructions on how to install OBridge in your project.
+See [installation guide](docs/installation.md) for detailed instructions on how to install WeBridge in your project.
 
 
 ---

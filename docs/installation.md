@@ -1,6 +1,6 @@
-# OBridge Installation Guide
+# WeBridge Installation Guide
 
-Welcome to OBridge! This guide will help you set up OBridge for seamless integration between Python, C++, and JavaScript.
+Welcome to WeBridge! This guide will help you set up WeBridge for seamless integration between Python, C++, and JavaScript.
 
 ---
 
@@ -88,8 +88,8 @@ Welcome to OBridge! This guide will help you set up OBridge for seamless integra
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/epiksabin/OBridge.git
-cd OBridge
+git clone https://github.com/epiksabin/WeBridge.git
+cd WeBridge
 ```
 
 ### Step 2: Create a Build Directory
@@ -129,11 +129,11 @@ cmake --build . --config Release
 
 # Or use the native build tool
 # Linux/macOS: make
-# Windows: msbuild OBridge.sln /p:Configuration=Release
+# Windows: msbuild WeBridge.sln /p:Configuration=Release
 ```
 
 **Build output:**
-- Static library: `lib/libobridge.a` (Linux/macOS) or `lib/obridge.lib` (Windows)
+- Static library: `lib/libobridge.a` (Linux/macOS) or `lib/WeBridge.lib` (Windows)
 - Test executable: `bin/test_obridge`
 - Examples: `bin/cpp_example`
 
@@ -159,10 +159,10 @@ ctest
 #### For C++
 Create a simple test file `test_basic.cpp`:
 ```cpp
-#include "obridge/bridge.hpp"
+#include "WeBridge/bridge.hpp"
 #include <iostream>
 
-using namespace OBridge;
+using namespace WeBridge;
 
 int main() {
     try {
@@ -181,7 +181,7 @@ int main() {
 #### For Python
 Create a simple test file `test_basic.py`:
 ```python
-from obridge import cpp, js
+from WeBridge import cpp, js
 
 # Test C++ library loading
 try:
@@ -195,9 +195,9 @@ except Exception as e:
 #### For JavaScript
 Create a simple test file `test_basic.js`:
 ```javascript
-const obridge = require('obridge');
+const WeBridge = require('WeBridge');
 
-const bridge = obridge.getBridge();
+const bridge = WeBridge.getBridge();
 const py_module = bridge.python('examples/calc.py');
 
 py_module.call('add', 5, 9).then(result => {
@@ -271,13 +271,13 @@ cmake --build . --config Release
 
 #### 6. Module import errors in Python
 ```
-ModuleNotFoundError: No module named 'obridge'
+ModuleNotFoundError: No module named 'WeBridge'
 ```
 
 **Solution:**
 ```bash
-# Add OBridge to Python path
-export PYTHONPATH="${PYTHONPATH}:/path/to/OBridge/src/python"
+# Add WeBridge to Python path
+export PYTHONPATH="${PYTHONPATH}:/path/to/WeBridge/src/python"
 
 # Or install in development mode
 cd src/python
@@ -357,7 +357,7 @@ After successful installation:
 1. **Read the Usage Guide**: See `docs/usage.md` for API details
 2. **Explore Examples**: Check `examples/` directory for language-specific examples
 3. **Run Tests**: Execute test suite to verify functionality
-4. **Build Your App**: Start integrating OBridge into your project
+4. **Build Your App**: Start integrating WeBridge into your project
 
 ### Quick Start Examples
 
@@ -375,7 +375,7 @@ result = cpp_lib.function(arg1, arg2)
 
 ```javascript
 // JavaScript - Initialize Python bridge
-const bridge = require('obridge').getBridge();
+const bridge = require('WeBridge').getBridge();
 const py = bridge.python('module.py');
 ```
 
@@ -385,7 +385,7 @@ const py = bridge.python('module.py');
 
 - **Documentation**: Read `docs/` directory
 - **Examples**: Check `examples/` directory for language-specific examples
-- **Issues**: Report bugs on [GitHub Issues](https://github.com/epiksabin/OBridge/issues)
+- **Issues**: Report bugs on [GitHub Issues](https://github.com/epiksabin/WeBridge/issues)
 - **Contributing**: See `docs/contributing.md` for contribution guidelines
 
 ---
@@ -405,8 +405,8 @@ const py = bridge.python('module.py');
 
 ## License
 
-OBridge is released under the Apache 2.0 License. See [LICENSE](../LICENSE) file for details.
+WeBridge is released under the Apache 2.0 License. See [LICENSE](../LICENSE) file for details.
 
 ---
 
-**Happy coding with OBridge!** 🚀
+**Happy coding with WeBridge!** 🚀

@@ -2,11 +2,11 @@
 
 #include <string>
 
-namespace OBridge {
+namespace WeBridge {
 namespace Common {
 
 constexpr const char* OBRIDGE_VERSION = "0.0.1";
-constexpr const char* OBRIDGE_NAME = "OBridge";
+constexpr const char* OBRIDGE_NAME = "WeBridge";
 
 constexpr const char* LANG_PYTHON = "py";
 constexpr const char* LANG_CPP = "c++";
@@ -32,4 +32,4 @@ constexpr int DEFAULT_TIMEOUT_MS = 5000;
 constexpr bool ENABLE_ASYNC_BY_DEFAULT = false;
 
 } // namespace Common
-} // namespace OBridge
+} // namespace WeBridge

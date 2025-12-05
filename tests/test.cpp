@@ -2,7 +2,7 @@
 #include "../src/cpp/include/bridge.hpp"
 #include <iostream>
 
-using namespace OBridge;
+using namespace WeBridge;
 
 int main() {
     try {

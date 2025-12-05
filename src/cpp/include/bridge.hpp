@@ -7,7 +7,7 @@
 #include <any>
 #include <vector>
 
-namespace OBridge {
+namespace WeBridge {
 
 /**
  * @brief Type conversion and data exchange interface
@@ -142,7 +142,7 @@ private:
 };
 
 /**
- * @brief main namespace for OBridge C++ API
+ * @brief main namespace for WeBridge C++ API
  */
 namespace cpp {
     /*
@@ -161,4 +161,4 @@ namespace cpp {
     JavaScriptBridge js(const std::string& engine = "node");
 }
 
-} // namespace OBridge
+} // namespace WeBridge

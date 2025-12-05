@@ -2,7 +2,7 @@
 #include <stdexcept>
 #include <typeinfo>
 
-namespace OBridge {
+namespace WeBridge {
 
 // ===============-===============-===============
 /*
@@ -212,7 +212,7 @@ std::any JavaScriptBridge::call_impl(const std::string& module_path,
     }
 }
 
-// ==================== obridge namespace ====================
+// ==================== WeBridge namespace ====================
 
 namespace cpp {
 
@@ -230,4 +230,4 @@ JavaScriptBridge js(const std::string& engine) {
 
 } // namespace cpp
 
-} // namespace OBridge
+} // namespace WeBridge

@@ -1,12 +1,12 @@
 /**
- * OBridge JavaScript Example
+ * WeBridge JavaScript Example
  * Demonstrates how to call C++ and Python functions from JavaScript
  */
 
-const obridge = require('../src/js/bridge');
+const WeBridge = require('../src/js/bridge');
 
 async function main() {
-    console.log("=== OBridge JavaScript Examples ===\n");
+    console.log("=== WeBridge JavaScript Examples ===\n");
 
     // ============================================================
     // Example 1: Load and call C++ shared library
@@ -14,7 +14,7 @@ async function main() {
     console.log("--- C++ Library Example ---");
     try {
         // Load C++ shared library (.dll on Windows, .so on Linux)
-        const cpp_module = obridge.getBridge().cpp('src/tools/calc.so');
+        const cpp_module = WeBridge.getBridge().cpp('src/tools/calc.so');
         
         // Call C++ function directly
         const result = cpp_module.add(5, 9);
@@ -29,7 +29,7 @@ async function main() {
     console.log("\n--- Python Module Example ---");
     try {
         // Load Python module
-        const py_module = obridge.getBridge().python('src/example/addition.py');
+        const py_module = WeBridge.getBridge().python('src/example/addition.py');
         
         // Call Python function
         const result = await py_module.call('add', 5, 9);
@@ -43,7 +43,7 @@ async function main() {
     // ============================================================
     console.log("\n--- Register Function Example ---");
     try {
-        const bridge = obridge.getBridge();
+        const bridge = WeBridge.getBridge();
         
         // Register a JavaScript function for cross-language calls
         bridge.registerFunction('add', (a, b) => a + b);
@@ -64,7 +64,7 @@ async function main() {
     // ============================================================
     console.log("\n--- Type Conversion Example ---");
     try {
-        const bridge = obridge.getBridge();
+        const bridge = WeBridge.getBridge();
         const converter = bridge.getConverter();
         
         // Convert JavaScript values to bridge format
@@ -93,7 +93,7 @@ async function main() {
     // ============================================================
     console.log("\n--- Multi-Language Interop Example ---");
     try {
-        const bridge = obridge.getBridge();
+        const bridge = WeBridge.getBridge();
         
         // Load modules from different languages
         const cpp_lib = bridge.cpp('src/tools/calc.so');
