@@ -133,8 +133,8 @@ cmake --build . --config Release
 ```
 
 **Build output:**
-- Static library: `lib/libobridge.a` (Linux/macOS) or `lib/WeBridge.lib` (Windows)
-- Test executable: `bin/test_obridge`
+- Static library: `lib/libwebridge.a` (Linux/macOS) or `lib/WeBridge.lib` (Windows)
+- Test executable: `bin/test_webridge`
 - Examples: `bin/cpp_example`
 
 ### Step 5: Verify Installation
@@ -144,10 +144,10 @@ cmake --build . --config Release
 ctest
 
 # Or run the test directly
-./bin/test_obridge
+./bin/test_webridge
 
 # On Windows
-.\bin\test_obridge.exe
+.\bin/test_webridge.exe
 ```
 
 ---
@@ -266,7 +266,7 @@ ctest: No tests found
 cmake --build . --config Release
 
 # Run tests explicitly
-./bin/test_obridge
+./bin/test_webridge
 ```
 
 #### 6. Module import errors in Python

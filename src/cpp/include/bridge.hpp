@@ -78,7 +78,8 @@ public:
     */
     template<typename... Args>
     std::any call(const std::string& module_path, const std::string& function_name, Args... args) {
-        std::vector<std::any> arg_list = {std::any(args)...};
+        std::vector<std::any> arg_list;
+        (..., arg_list.push_back(std::any(args)));
         return call_impl(module_path, function_name, arg_list);
     }
     
@@ -102,7 +103,8 @@ public:
     */
     template<typename... Args>
     std::any call(const std::string& function_name, Args... args) {
-        std::vector<std::any> arg_list = {std::any(args)...};
+        std::vector<std::any> arg_list;
+        (..., arg_list.push_back(std::any(args)));
         return call_impl(function_name, arg_list);
     }
     
@@ -130,7 +132,8 @@ public:
     */
     template<typename... Args>
     std::any call(const std::string& module_path, const std::string& function_name, Args... args) {
-        std::vector<std::any> arg_list = {std::any(args)...};
+        std::vector<std::any> arg_list;
+        (..., arg_list.push_back(std::any(args)));
         return call_impl(module_path, function_name, arg_list);
     }
     

@@ -1,6 +1,6 @@
 # WeBridge Tests CMakeLists.txt
 cmake_minimum_required(VERSION 3.16)
-project(OBridge_Tests)
+project(WeBridge_Tests)
 
 # set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -39,13 +39,13 @@ elseif(APPLE)
 endif()
 
 # add test executable
-add_executable(test_obridge test.cpp)
+add_executable(test_webridge test.cpp)
 
 # link test executable with bridge library
-target_link_libraries(test_obridge PRIVATE WeBridge)
+target_link_libraries(test_webridge PRIVATE WeBridge)
 
 # include directories for the test
-target_include_directories(test_obridge PRIVATE
+target_include_directories(test_webridge PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../src/cpp/include
 )
 
@@ -53,7 +53,7 @@ target_include_directories(test_obridge PRIVATE
 enable_testing()
 
 # add test
-add_test(NAME OBridgeTest COMMAND test_obridge)
+add_test(NAME WeBridgeTest COMMAND test_webridge)
 
 # optional: other test files here
 # add_executable(test_cpp ../examples/cpp_example.cpp)

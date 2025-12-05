@@ -1,5 +1,5 @@
-OBRIDGE_VERSION = "0.0.1"
-OBRIDGE_NAME = "WeBridge"
+WEBRIDGE_VERSION = "0.0.1"
+WEBRIDGE_NAME = "WeBridge"
 
 LANG_PYTHON = "py"
 LANG_CPP = "c++"

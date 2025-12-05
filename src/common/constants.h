@@ -5,8 +5,8 @@
 namespace WeBridge {
 namespace Common {
 
-constexpr const char* OBRIDGE_VERSION = "0.0.1";
-constexpr const char* OBRIDGE_NAME = "WeBridge";
+constexpr const char* WEBRIDGE_VERSION = "0.0.1";
+constexpr const char* WEBRIDGE_NAME = "WeBridge";
 
 constexpr const char* LANG_PYTHON = "py";
 constexpr const char* LANG_CPP = "c++";
